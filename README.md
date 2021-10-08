@@ -1,0 +1,1 @@
+# hayakuchi_checker

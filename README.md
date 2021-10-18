@@ -29,3 +29,6 @@
     画面に表示された文章が平野レミのペースで進んでいくので、提示された速さで文章を読み上げてもらうトレーニングになります。
 # 画面遷移図
 https://www.figma.com/file/MlOApU8qHyH0OJJcPHdEJU/早口チェッカー?node-id=0%3A1
+
+# ER図
+https://drive.google.com/file/d/1bFzha6C6Bs-17QLDRL2N9SPzsVLvj96n/view?usp=sharing

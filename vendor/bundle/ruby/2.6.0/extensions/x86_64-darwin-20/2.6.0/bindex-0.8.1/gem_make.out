@@ -1,0 +1,15 @@
+current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/a/.rbenv/versions/2.6.5/bin/ruby -I /Users/a/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211028-7599-8qil2p.rb extconf.rb
+creating Makefile
+
+current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20211028-7599-870la3/skiptrace/internal

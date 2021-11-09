@@ -3,6 +3,8 @@
     <h1>早口チェッカー</h1>
   </div>
   <div class="menu">
-    <%= image_tag "keisoku.png", class:'keisoku' %>
+    <%= link_to new_game_url do %>
+      <button class="btn btn-primary btn-lg">早速計測してみる</button>
+    <% end %>
   </div>
 </div>

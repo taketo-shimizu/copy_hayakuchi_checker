@@ -1,0 +1,64 @@
+   <div class="container">
+     <p id="timer">00:00:00</p>
+
+     <div>
+       <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+     </div>
+   </div>
+   <script>
+     var start;
+     var timer_id;
+
+#id属性が、start_stopのオブジェクトを探し、それがClickされたら、Functionが作動する。
+  
+      document
+       .getElementById("start_stop")
+       .addEventListener("click", function () {
+
+#STARTの文字を押すと、goTimerを１００分の１秒？ごとに繰り返す。カウントが始まる。、
+#同時に、START文字をSTOPに変更する。Bootstrapも変えるように指示。
+         if (this.innerHTML === "START") {
+           start = new Date();
+
+           timer_id = setInterval(goTimer, 10);
+
+           //STOPボタンにする
+           this.innerHTML = "STOP";
+           this.classList.remove("btn-primary");
+           this.classList.add("btn-danger");
+         } else {
+#START以外のときにClickすると（つまりSTOPのとき）、timer_idの作動を停止して、文字と装飾をSTARTに戻す
+           clearInterval(timer_id);
+           //STARTボタンに戻す
+           this.innerHTML = "START";
+           this.classList.remove("btn-danger");
+           this.classList.add("btn-primary");
+         }
+       });
+
+     var addZero = function (value) {
+       if (value < 10) {
+         value = "0" + value;
+       }
+       return value;
+     };
+
+     var goTimer = function () {
+       var now = new Date();
+       var milli = now.getTime() - start.getTime();
+       var seconds = Math.floor(milli / 1000);
+       var minutes = Math.floor(seconds / 60);
+       var hours = Math.floor(minutes / 60);
+
+       seconds = seconds - minutes * 60;
+       minutes = minutes - hours * 60;
+
+       hours = addZero(hours);
+       minutes = addZero(minutes);
+       seconds = addZero(seconds);
+
+#id属性がtimerの要素の表示の仕方を設定する
+       document.getElementById("timer").innerHTML =
+         hours + ":" + minutes + ":" + seconds;
+     };
+   </script>

@@ -1,0 +1,158 @@
+  <div class= "container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>遊び方</h1>
+        <div class= "explanation" id="explanation">
+          <p>
+            人が聞いていて聴きやすいと感じる話し方の<br>
+            速度は、1分間に300文字といわれています。<br>
+            あなたの話す速さと理想の速さにどのくらい<br>
+            ズレがあるのか測定を行います。<br>
+            マイクボタンを押して話しかけてください。<br>
+            終わったら再度マイクボタンを押してください。<br>
+          </p> 
+        </div>
+        <div class="d-flex flex-column bd-highlight mb-3"> 
+          <%= image_tag 'audio_hakei.jpeg', class: 'audio_hakei' %>
+          <div id="start_btn" type="button" value="start" class="mike">
+            <%= image_tag 'mike.png' %>
+            <input class="form-control" id="counter" name="counter" type="text" value="00:00:00:00">
+          </div>
+        </div>
+        <div id="content"></div>
+      </div>
+    </div>
+
+    <script>
+  
+      const speech = new webkitSpeechRecognition();
+      speech.lang = 'ja-JP';
+
+      const start_btn = document.getElementById('start_btn');
+      const content = document.getElementById('content');
+
+      start_btn.addEventListener('click', function () {
+          speech.start();
+      });
+      
+
+      speech.onresult = function (e) {
+        speech.stop();
+        if (e.results[0].isFinal) {
+            var autotext = e.results[0][0].transcript
+            content.innerHTML += '<div>' + autotext + '</div>';
+        }
+      }
+
+      speech.onend = () =>
+      {
+        speech.start()
+      };
+
+  
+      
+      (function (){
+    
+        var data = {
+        app_id: 'a5e4e8dd5686de7743b620c720e89beca5e5a5dca31ed4a74b7b6efddf5cebc1',
+        sentence:'早口' ,
+        output_type: "hiragana",
+        };
+      console.log(data);
+ 
+    
+      jsonEncoded = JSON.stringify(data);
+      console.log(jsonEncoded);
+ 
+   
+      $.ajax({
+        type: "POST",
+        url: "https://labs.goo.ne.jp/api/hiragana",
+        contentType: "application/json",
+        data: jsonEncoded,
+        success: function(data) {
+        console.log(data);
+        }
+      });
+      })();
+      
+      
+      
+      $(function(){
+        reset_timer();
+      
+        var timer;
+        var timerID;
+        var timerFlag = 0;	// 0:停止 1:動作
+      
+       
+        $("#start_btn").on("click", function(){
+          if(timerFlag === 0){
+            start_count();
+          }else{
+            stop_count();
+          }
+        });
+      
+   
+        $("#btnReset").on("click", function(){
+          reset_timer();
+        });
+      
+   
+        function reset_timer() {
+          if(timerFlag === 1){
+            stop_count();
+          }
+          timer = 0; 
+          $("#counter").val("00:00:00:00");
+        }
+      
+    
+        function start_count() { 					
+          $("#start_btn").val("stop");
+          timerFlag = 1;
+          timerID = setInterval(count_up, 10); 
+        }
+      
+
+        function stop_count() { 					
+          $("#start_btn").val("start");
+          timerFlag = 0;
+          clearInterval(timerID);
+        }
+      
+   
+        function count_up() {
+          ++timer;
+          var formatTimer = counter_format(timer);
+          $("#counter").val(formatTimer);
+        }
+      
+        
+        function counter_format(num) {
+          var numZan = num;	// 残りの時間(10ミリ秒単位)
+          
+          var hh = Math.floor(numZan / (100 * 60 * 60));
+          
+          numZan = numZan - (hh * 100 * 60 * 60);
+
+          var mm = Math.floor(numZan / (100 * 60));
+          
+          numZan = numZan -(mm * 100 * 60);
+          
+          var ss = Math.floor(numZan / 100);
+          
+          numZan = numZan - (ss * 100);
+          var ms = numZan;
+          
+         
+          if(hh < 10){hh = "0" + hh;}
+          if(mm < 10){mm = "0" + mm;}
+          if(ss < 10){ss = "0" + ss;}
+          if(ms < 10){ms = "0" + ms;}
+          return hh + ":" + mm + ":" + ss + ":" + ms;
+        }
+      });
+    </script>
+  </div>

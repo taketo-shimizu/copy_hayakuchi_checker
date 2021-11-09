@@ -1,29 +1,45 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
 .top-wrapper {
+    position: relative;
     background-image: image-url("home.jpeg");
     background-size:cover;
+    background-position: center;
     height: 100vh;
     width: 100%;
 
-.keisoku {
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    width: 300px;
-}
-
 .title {
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    color: rgb(255, 0, 255);
     text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: rgb(245, 9, 213);
-
 }
+
+.btn-primary {
+    background: rgb(255, 0, 255);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 300px;
+    height: 70px;
+    color: white; //ボタンのテキストの色
+    border-color: white
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(221, 1, 221);
+    border-color: white
+}
+}
+
+@media (max-width: 540px) {
+    .top-wrapper {
+      height: 650px;
+      background-position: 30% 50%;
+    .btn-primary {
+      width: 200px;
+      top: 25%;
+    }
+    }
+
 }

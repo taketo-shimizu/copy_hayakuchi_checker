@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootstrap', '~> 4.4.1'
+gem 'font-awesome-sass', '~> 5.12.0'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -37,9 +40,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem 'bootstrap', '~> 4.4.1'
-  gem 'font-awesome-sass', '~> 5.12.0'
-  gem 'jquery-rails'
   gem 'mysql2', '>= 0.4.4'
 end
 

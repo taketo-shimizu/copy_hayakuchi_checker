@@ -1,5 +1,5 @@
 current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.8/ext/nio4r
-/Users/a/.rbenv/versions/2.6.5/bin/ruby -I /Users/a/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211028-7599-98ioap.rb extconf.rb
+/Users/a/.rbenv/versions/2.6.6/bin/ruby -I /Users/a/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20211110-41062-lcuegl.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for linux/io_uring.h... no
@@ -93,4 +93,4 @@ linking shared-object nio4r_ext.bundle
 
 current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.8/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20211028-7599-2f9nus
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20211110-41062-x2oj52

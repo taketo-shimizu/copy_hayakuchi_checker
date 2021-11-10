@@ -1,5 +1,5 @@
 current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
-/Users/a/.rbenv/versions/2.6.5/bin/ruby -I /Users/a/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211028-18147-8bz8mg.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl/lib
+/Users/a/.rbenv/versions/2.6.6/bin/ruby -I /Users/a/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20211110-41062-1hxiyzb.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl/lib
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -41,4 +41,4 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Users/a/workspace/runteq/hayakuchi_checker/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20211028-18147-1h25rf/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20211110-41062-1j2djg2/mysql2

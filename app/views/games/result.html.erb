@@ -1,0 +1,27 @@
+<div class= "container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class= "result_image" ></div>
+      <div id = "result_message" ></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    var fast_talking_score = location.search.substring(1);
+    console.log(fast_talking_score);
+    if (fast_talking_score<5.5 && fast_talking_score>4.5) {
+        console.log('丁度よいペースで話せています');
+        $(".result_image").append(('<img src="/assets/speed.jpg">' id="speed") );
+    }else if (fast_talking_score<4.5) {
+        console.log('話す速度はやや遅いです');
+        $(".result_image").append(('<img src="/assets/remi.jpg">' id="speed") );
+    }else if (fast_talking_score>5.5) {
+        console.log('話す速度はやや速いです')
+        $(".result_image").append(('<img src="/assets/youichi.jpg">' id="speed") );
+    }else {
+        console.log('計測できていません')
+    }
+  });
+</script>

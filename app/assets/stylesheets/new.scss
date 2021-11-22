@@ -27,17 +27,28 @@ p {
     height: 25vh;
 }
 
-.mike {
-    position: relative;
-    height: auto;
-    width: 130px;
-    margin: auto;
-    top: 10px;
-}
+//.mike {
+    //position: relative;
+    //height: auto;
+    //width: 130px;
+    //margin: auto;
+    //top: 10px;
+//}
 
 input {
-    position: absolute;
+    margin:0 auto;
     width:130px;
     top: 150px;
+}
+
+.btn-danger {
+    background: rgb(255, 0, 255);
+    color: white; 
+    border-color: white;
+}
+
+.btn-danger:hover, .btn-danger:active {
+    background-color: rgb(221, 1, 221) !important;
+    border-color: white !important;
 }
 }

@@ -23,12 +23,12 @@
     width: 300px;
     height: 70px;
     color: white; //ボタンのテキストの色
-    border-color: white
+    border-color: white;
 }
 
-.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: rgb(221, 1, 221);
-    border-color: white
+.btn-primary:hover, .btn-primary:active {
+    background-color: rgb(221, 1, 221) !important;
+    border-color: white !important;
 }
 }
 

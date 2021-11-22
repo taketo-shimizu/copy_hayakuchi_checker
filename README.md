@@ -33,3 +33,7 @@ https://www.figma.com/file/MlOApU8qHyH0OJJcPHdEJU/早口チェッカー?node-id=
 
 # ER図
 https://drive.google.com/file/d/1bFzha6C6Bs-17QLDRL2N9SPzsVLvj96n/view?usp=sharing
+
+# 動作確認（結果画面ができていません。コンソールに表示されている1文字あたりの時間(秒)を結果画面で表示させる予定です)
+https://user-images.githubusercontent.com/84120371/142822032-1a6cef84-af15-4945-9645-78492cb13293.mov
+

@@ -34,7 +34,7 @@
         子どものいなかったおじいさんとおばあさんは、大喜びです。
         桃から生まれた男の子を、おじいさんとおばあさんは桃太郎と名付けました。
         </font></p>
-        //<div id = "result" ></div>
+        <div id = "result" ></div>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@
             var word_count = data.converted.replace(/\s+/g,'').length;
             console.log("発した文字数:", word_count);
             var fast_talking_score = word_count/talking_time;
-            console.log("1文字あたりの時間(秒)", fast_talking_score);
+            console.log("1秒あたりの文字数", fast_talking_score);
          
             $.ajax({
               url: '/games/new',  

@@ -34,8 +34,8 @@ https://www.figma.com/file/MlOApU8qHyH0OJJcPHdEJU/早口チェッカー?node-id=
 # ER図
 https://drive.google.com/file/d/1bFzha6C6Bs-17QLDRL2N9SPzsVLvj96n/view?usp=sharing
 
-# 動作確認（結果画面ができていません。コンソールに表示されている1秒あたりの文字数を結果画面で表示させる予定です)
-https://user-images.githubusercontent.com/84120371/142825028-d447900a-ac8b-4944-ac6b-e37f475c5226.mov
+# 動作確認
+https://user-images.githubusercontent.com/84120371/143431191-b02eb145-0f0d-4696-a66e-ff1ee0904b07.mov
 
 
 

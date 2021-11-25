@@ -5,8 +5,39 @@
     background-position: center;
     height: 100vh;
     min-width: 100%;
-
-.speed {
-    height: auto;
 }
+#result_image {
+    top:10px;
+    text-align:center;
+}
+
+#result_message_1 {
+    text-align:center;
+}
+
+#result_message_2 {
+    text-align:center;
+}
+
+#image {
+    height: 250px;
+    width: 300px;
+}
+
+.btn-danger {
+    background: rgb(255, 0, 255);
+    color: white; 
+    border-color: white;
+}
+
+.btn-danger:hover, .btn-danger:active {
+    background-color: rgb(221, 1, 221) !important;
+    border-color: white !important;
+}
+
+@media (max-width: 540px) {
+  #image {
+    height: 300px;
+    width: 300px;
+  } 
 }

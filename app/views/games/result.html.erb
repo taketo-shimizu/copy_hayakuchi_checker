@@ -1,27 +1,39 @@
 <div class= "container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <div class= "result_image" ></div>
-      <div id = "result_message" ></div>
+      <div class="d-flex flex-column bd-highlight mb-3"> 
+        <div id = "result_image" ></div>
+        <div id = "result_message_1" >
+          <p class="wf-roundedmplus1c"><font size="6" color="white"> 計測お疲れ様でした!</font></p>
+        </div>
+        <div id = "result_message_2" class="wf-roundedmplus1c" ></div>
+        <div id = "result_message_3" class="wf-roundedmplus1c" ></div>
+      </div>
+      <%= link_to new_game_url do %>
+        <button class="btn btn-danger btn-lg wf-roundedmplus1c">もういちど計測してみる</button>
+      <% end %>
     </div>
   </div>
 </div>
 
 <script>
   $(document).ready(function(){
-    var fast_talking_score = location.search.substring(1);
-    console.log(fast_talking_score);
-    if (fast_talking_score<5.5 && fast_talking_score>4.5) {
-        console.log('丁度よいペースで話せています');
-        $(".result_image").append(('<img src="/assets/speed.jpg">' id="speed") );
+    var result = location.search.substring(1);
+    var fast_talking_score = result.split(",")[0];
+    var word_count = result.split(",")[1];
+    var talking_time = result.split(",")[2];
+    
+    if (fast_talking_score<=5.5 && fast_talking_score>=4.5) {
+        $("#result_image").append( ('<img src="/assets/speed.jpg" id="image">') ); //丁度良いペース
+        $("#result_message_2").append( (`<p><font color="white">あなたは<font size= "7" >理想のペースに近い</font>です！</font></p>`) );
     }else if (fast_talking_score<4.5) {
-        console.log('話す速度はやや遅いです');
-        $(".result_image").append(('<img src="/assets/remi.jpg">' id="speed") );
+        $("#result_image").append( ('<img src="/assets/remi.jpg" id="image">') ); //遅い
+        $("#result_message_2").append( (`<p><font color="white">あなたは<font size= "7">遅い</font>です！</font></p>`) );
     }else if (fast_talking_score>5.5) {
-        console.log('話す速度はやや速いです')
-        $(".result_image").append(('<img src="/assets/youichi.jpg">' id="speed") );
-    }else {
-        console.log('計測できていません')
+        $("#result_image").append( ('<img src="/assets/youichi.jpg" id="image">') ); //速い
+        $("#result_message_2").append( (`<p><font color="white">あなたは<font size= "7">早口</font>です！</font></p>`) );
     }
+    
+    $("#result_message_3").append( (`<p><font color="white">あなたは${talking_time}秒間に${word_count}文字話しました<br>つまり1秒間に${fast_talking_score}文字のペースで話しています<br>※適切なペースは1秒間に5文字です</font></p>`) )
   });
 </script>

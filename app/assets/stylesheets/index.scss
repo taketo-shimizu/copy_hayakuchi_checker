@@ -11,9 +11,36 @@
     width: 100%;
 
 .title {
-    color: rgb(255, 0, 255);
-    text-align: center;
-  
+    position:absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    color: white;
+    animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #bb62bb,
+        0 0 11px #bb62bb,
+        0 0 19px #bb62bb,
+        0 0 40px rgb(255, 0, 255),
+        0 0 80px rgb(255, 0, 255),
+        0 0 90px rgb(255, 0, 255),
+        0 0 100px rgb(255, 0, 255),
+        0 0 150px rgb(255, 0, 255);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+  }
+
+    
+.wf-roundedmplus1c { 
+    font-family: "M PLUS Rounded 1c"; 
+    font-weight: bold;
 }
 
 
@@ -22,9 +49,9 @@
     background: rgb(255, 0, 255);
     position: absolute;
     right: 0;
-    top: 50%;
-    width: 300px;
-    height: 70px;
+    top: 45%;
+    width: 310px;
+    height: 80px;
     color: white; //ボタンのテキストの色
     border-color: white;
 }

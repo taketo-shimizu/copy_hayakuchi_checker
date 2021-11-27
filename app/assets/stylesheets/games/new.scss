@@ -16,6 +16,21 @@ h1{
 .explanation {
     text-align:center
 }
+
+.box_status{
+    position: relative;
+}
+
+#status {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+
+}
+
+
 p {
     font-size: 1.1em;
     font-weight: 800;
@@ -24,7 +39,8 @@ p {
 }
 
 .audio_hakei {
-    height: 25vh;
+    height: 20vh;
+    width: 100%;
 }
 
 //.mike {

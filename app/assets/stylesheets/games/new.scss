@@ -10,11 +10,16 @@
     min-width: 100%;
 h1{
     color: white;
+    font-family: 'DotGothic16', sans-serif;
     text-align: center;
+ 
+
 }
 
+  
 .explanation {
     text-align:center
+    
 }
 
 .box_status{
@@ -34,8 +39,10 @@ h1{
 p {
     font-size: 1.1em;
     font-weight: 800;
+    color: white;
     display: inline-block;
     text-align: left;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 .audio_hakei {
@@ -43,17 +50,10 @@ p {
     width: 100%;
 }
 
-//.mike {
-    //position: relative;
-    //height: auto;
-    //width: 130px;
-    //margin: auto;
-    //top: 10px;
-//}
 
 input {
     margin:0 auto;
-    width:130px;
+    width:200px;
     top: 150px;
 }
 

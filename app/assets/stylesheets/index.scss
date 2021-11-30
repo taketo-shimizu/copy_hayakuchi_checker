@@ -13,11 +13,12 @@
 .title {
     position:absolute;
     top: 10px;
-    left: 50%;
+    left: 55%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     color: white;
+    font-family: 'DotGothic16', sans-serif;
     animation: flicker 1.5s infinite alternate;
 }
 @keyframes flicker {
@@ -36,12 +37,6 @@
         text-shadow: none;
     }
   }
-
-    
-.wf-roundedmplus1c { 
-    font-family: "M PLUS Rounded 1c"; 
-    font-weight: bold;
-}
 
 
 

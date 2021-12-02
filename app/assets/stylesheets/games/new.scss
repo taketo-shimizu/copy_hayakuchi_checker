@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .container {
     position: relative;
-    background-image: image-url("haikei.jpeg");
     background-size:cover;
     background-position: center;
     height: 100vh;
@@ -58,13 +57,13 @@ input {
 }
 
 .btn-danger {
-    background: rgb(255, 0, 255);
+    background: gray;
     color: white; 
     border-color: white;
 }
 
 .btn-danger:hover, .btn-danger:active {
-    background-color: rgb(221, 1, 221) !important;
+    background-color: gray !important;
     border-color: white !important;
 }
 }

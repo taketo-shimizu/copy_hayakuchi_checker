@@ -6,6 +6,7 @@
     height: 100vh;
     min-width: 100%;
 }
+
 #result_image {
     top:10px;
     text-align:center;
@@ -24,16 +25,10 @@
     width: 300px;
 }
 
-.btn-danger {
-    background: rgb(255, 0, 255);
-    color: white; 
-    border-color: white;
+.replay {
+    color: white;
 }
 
-.btn-danger:hover, .btn-danger:active {
-    background-color: rgb(221, 1, 221) !important;
-    border-color: white !important;
-}
 
 @media (max-width: 540px) {
   #image {
